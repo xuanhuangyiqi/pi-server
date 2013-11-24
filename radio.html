@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block content_list %}
+    <div class="highlight">
+    <p> <button type="button" class="btn btn-primary btn-lg" onclick="stop()"> Stop </button> </p>
+    {% for x in radio %}
+    <p> <button type="button" class="btn btn-primary btn-lg" onclick="play('{{ radio[x] }}')"> {{ x }} </button> </p>
+    {% end %}
+    </div>
+{% end %}
+
