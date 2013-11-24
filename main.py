@@ -23,6 +23,7 @@ class ShellHandler(tornado.web.RequestHandler):
             self.write('stop')
             os.system("mpc stop")
         elif befehl == 'play':
+            os.system("mpc clear")
             os.system("mpc add %s"%self.get_argument('url'))
             os.system("mpc play")
         else:
